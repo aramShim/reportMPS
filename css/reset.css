@@ -1,0 +1,82 @@
+@charset "utf-8";
+/*
+ * 파일정의 : reset.css
+ * 파일설명 : reset css
+ * 작성자 :  arams
+*/
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+/**********************************************************************************
+** global rest
+***********************************************************************************/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,time,figure,article,nav,header,footer,hgroup,video,audio,aside,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	vertical-align: baseline;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{font-weight: normal;}
+body {overflow-y:scroll; }
+body, table, input, select, textarea, a, a:link, a:visited, a:hover,h1, h2, h3, h4, h5, h6, a, p{ letter-spacing:-.5px; font-size: 17px; line-height:1.5; color: #0d0d0d; font-family:'Poppins','Pretendard-Regular','맑은 고딕', 'Malgun Gothic', arial, Verdana, Dotum, AppleGothic, sans-serif; font-weight: 500;}
+article,aside,details,figcaption,figure,footer,header,menu,nav,section,video{display:block;}
+img,button { border:0 none; }
+li {list-style: none; }
+hr, caption {display: none; }
+a {text-decoration: none; cursor:pointer; transition: all 0.2s ease; }
+a:hover, button:hover {transition: all 0.2s ease; }
+button {overflow: hidden; cursor: pointer; background:none; padding: 0; margin: 0; font-size: inherit;}
+input{border: 0;}
+input,img { vertical-align: middle;}
+table { /*border-collapse: collapse;*/ border-spacing: 0; table-layout: fixed; word-wrap: break-word;  }
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+
+
+/* selection */
+::-moz-selection {background: #6bb5f5; color:#fff;}
+::selection {background: #6bb5f5; color:#fff;}
+::-moz-selection {background: #6bb5f5; color:#fff;}
+
+/* reset some shadow dom */
+/* clears the 'X' from Internet Explorer Chrome */
+input::-ms-clear {  display: none; width : 0; height: 0; }
+input::-ms-reveal {  display: none; width : 0; height: 0; }
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { display: none; }
+
+
+/* **************************************** *
+ * INPUT
+ * **************************************** */
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=password],
+input[type=url],
+input[type=number],
+input[type=search],
+input[type=date],
+input[type=time],
+textarea {appearance:none; -webkit-appearance: none;-moz-box-sizing: border-box;-webkit-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 0; border-radius:0px;outline: none;}
+input[type=submit], input[type=button], button {appearance:none; -webkit-appearance:none; font-family:'Poppins','Pretendard-Regular', '맑은 고딕', 'Malgun Gothic', sans-serif; border-radius:0px;}
+input[type=radio] {border-radius: 100%;}
+
+
+/* PLACEHOLDER */
+::-webkit-input-placeholder {font-family:'Poppins','Pretendard-Regular', '맑은 고딕', 'Malgun Gothic', sans-serif;color: #0d0d0d;}
+::-moz-placeholder {font-family:'Poppins','Pretendard-Regular', '맑은 고딕', 'Malgun Gothic', sans-serif;color: #0d0d0d;}
+:-ms-input-placeholder {font-family:'Poppins','Pretendard-Regular', '맑은 고딕', 'Malgun Gothic', sans-serif;color: #0d0d0d;}
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {color: transparent;}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {color: transparent;}
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {color: transparent;}
