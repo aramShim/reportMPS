@@ -6,6 +6,7 @@
 	--leftmenu: 216px;
 	--color-bg : #c5c5c7;
 	--layout-padding: 40px 50px;
+  --layout-padding-footer : 20px 50px;
 }
 /*wrap*/
 .flex {display: flex;}
@@ -30,18 +31,18 @@ body {scroll-behavior: smooth;}
 
 .form-floating > label {position: absolute; top: 0; left:0; z-index:2; height: 100%; padding: 16px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; pointer-events: none; border: 1px solid transparent; transform-origin: 0 0; transition: opacity .1s ease-in-out,transform .1s ease-in-out}
 
-.form-floating>.form-control:focus~label, 
+.form-floating>.form-control:focus~label,
 .form-floating>.form-control:not(:placeholder-shown)~label {color: rgba(0,0,0,.65); transform: scale(.85) translateY(-.5rem) translateX(.15rem);}
 
 
-.form-floating>.form-control:focus~label::after, 
+.form-floating>.form-control:focus~label::after,
 .form-floating>.form-control:not(:placeholder-shown)~label::after {position: absolute; inset: 16px 4px; z-index: -1; content:'';}
 
 /*********************
 * LAYOUT
 *********************/
 /*leftmenu*/
-.leftmenu-wrap {width: var(--leftmenu); background: #f9f9f9; box-shadow: 0px 0px 1px rgba(0,0,0,.2); isolation: isolate; max-height: 100vh; position: sticky; top:0; overflow-y: auto; } 
+.leftmenu-wrap {width: var(--leftmenu); background: #f9f9f9; box-shadow: 0px 0px 1px rgba(0,0,0,.2); isolation: isolate; max-height: 100vh; position: sticky; top:0; overflow-y: auto; }
 .leftmenu-wrap::-webkit-scrollbar {width: 0px;background-color: transparent}
 .leftmenu-wrap::-webkit-scrollbar-thumb {border: 3px solid transparent; border-radius: 7px; background-clip: padding-box;background-color: hsla(0, 0%, 59%, .5)}
 .leftmenu-wrap::-webkit-scrollbar-track {padding: 0px;background-color: transparent;border-radius: 10px}
@@ -56,7 +57,7 @@ body {scroll-behavior: smooth;}
 .leftmenu .gnb > li {padding: 0px 26px;}
 .leftmenu .gnb > li > a {font-size: 15px; border-bottom: 1px solid #d7d7d7; display: flex; align-items: center; justify-content: space-between; padding: 16px 3px 10px 10px; }
 .leftmenu .gnb > li > a i {display: inline-block; font-size: .6em; color: #252525; transition: transform .3s ease;}
-.leftmenu .gnb > li > a:hover, 
+.leftmenu .gnb > li > a:hover,
 .leftmenu .gnb > li > a.active {border-bottom-color: #111;}
 .leftmenu .gnb > li > .menu-label.active i {transform: rotate(-180deg); transition: transform .3s ease;}
 
@@ -199,7 +200,7 @@ body {scroll-behavior: smooth;}
   top: -0px;
   bottom: 0;
   margin: auto 0;
-  left: 28px;  
+  left: 28px;
 }
 .horizontalbar-wrap li .bar-wrap .bar:hover b:after {
   content: attr(aria-label);
@@ -229,13 +230,14 @@ body {scroll-behavior: smooth;}
 
 
 /*footer*/
-.footer {background: #fff; padding: var(--layout-padding); box-shadow: 0px 0px 1px rgba(0,0,0,.2); border-top: 1px solid var(--color-bg)}
+.footer {background: #fff; padding: var(--layout-padding-footer); box-shadow: 0px 0px 1px rgba(0,0,0,.2); border-top: 1px solid var(--color-bg)}
 .footer ul li {padding: 2px 0;}
 .footer ul b {display: inline-block;}
 
 @media all and (max-width:1746.99px){
 	:root {
 		--layout-padding: 30px 40px;
+    --layout-padding-footer : 20px 40px;
 	}
 	body, table, input, select, textarea, a, a:link, a:visited, a:hover, h1, h2, h3, h4, h5, h6, a, p {font-size: 15px;}
 	.leftmenu .gnb > li > a {font-size: 15px;}
@@ -252,7 +254,7 @@ body {scroll-behavior: smooth;}
 }
 @media all and (max-width:1548px){
 	.content-wrap {overflow-x: auto;}
-	.content-inner {min-width: 1280px;}	
+	.content-inner {min-width: 1280px;}
 }
 
 @media all and (max-width:1099.99px){
@@ -269,7 +271,7 @@ body {scroll-behavior: smooth;}
   .mo-header > .flex {align-items: center; justify-content: space-between; height: 100%; padding: 0 40px;}
   .mo-header .mo-header-logo {align-items: center;}
   .mo-header .logo {margin-left: 10px;}
-  .mo-header .logo img {width: 120px;}  
+  .mo-header .logo img {width: 120px;}
   .mo-header .mo-header-logo .btn,
   .mo-header .mo-header-btn-wrap .btn {display: inline-flex; align-items: center; justify-content: center; background-color: #111; width: 36px; height: 36px; border-radius: 50%;  vertical-align: middle;}
 
@@ -277,7 +279,7 @@ body {scroll-behavior: smooth;}
     position: relative;
     width: 15px;
     height: 12px;
-    cursor: pointer;    
+    cursor: pointer;
   }
   .menu-wrap .line{
     position: absolute;
@@ -291,12 +293,12 @@ body {scroll-behavior: smooth;}
     transform-origin: 50% 50%;
   }
   .menu-wrap .line:first-child{ transform: translate3d(0, -6px, 0px); }
-  .menu-wrap .line:last-child{transform: translate3d(0, 6px, 0px);} 
-  
+  .menu-wrap .line:last-child{transform: translate3d(0, 6px, 0px);}
+
   .menu-wrap.open .line:first-child{transform: rotate3d(0, 0, 1, 45deg) translate3d(0, 0, 0); }
   .menu-wrap.open .line:nth-child(2){opacity: 0;}
   .menu-wrap.open .line:last-child{transform: rotate3d(0, 0, 1, -45deg); }
-  
+
 
   #content {width: 100%;}
   .content-inner {width: 100%; min-width: auto;}
@@ -331,9 +333,10 @@ body {scroll-behavior: smooth;}
 
 }
 
-@media all and (max-width:519.99px){  
+@media all and (max-width:519.99px){
   :root {
     --layout-padding: 30px 20px;
+    --layout-padding-footer : 20px;
   }
   body, table, input, select, textarea, a, a:link, a:visited, a:hover, h1, h2, h3, h4, h5, h6, a, p {font-size: 14px;}
   .mo-header > .flex { padding: 0 20px;}
@@ -345,7 +348,7 @@ body {scroll-behavior: smooth;}
 }
 
 @media all and (max-width:455.99px){
-  
+
   .horizontalbar-wrap li {flex-flow: column;}
   .horizontalbar-wrap li .bar-percent {width: 100%;}
   .grid4 .item {width: 100%;}
