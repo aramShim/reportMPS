@@ -26,7 +26,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,time,figure,article,
 }
 h1, h2, h3, h4, h5, h6{font-weight: normal;}
 body {overflow-y:scroll; }
-body, table, input, select, textarea, a, a:link, a:visited, a:hover,h1, h2, h3, h4, h5, h6, a, p{ letter-spacing:-.5px; font-size: 17px; line-height:1.5; color: #0d0d0d; font-family:'Poppins','Pretendard-Regular','맑은 고딕', 'Malgun Gothic', arial, Verdana, Dotum, AppleGothic, sans-serif; font-weight: 500;}
+body, table, input, select, textarea, a, a:link, a:visited, a:hover,h1, h2, h3, h4, h5, h6, a, p{ letter-spacing:-.5px; font-size: 15px; line-height:1.5; color: #0d0d0d; font-family:'Poppins','Pretendard-Regular','맑은 고딕', 'Malgun Gothic', arial, Verdana, Dotum, AppleGothic, sans-serif; font-weight: 500;}
 article,aside,details,figcaption,figure,footer,header,menu,nav,section,video{display:block;}
 img,button { border:0 none; }
 li {list-style: none; }

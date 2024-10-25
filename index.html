@@ -29,21 +29,17 @@
   <script src="js/ui.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
 
+  
+
 </head>
 <body>
   <div id="wrap" class="flex">
     <div class="leftmenu-wrap">
       <div class="pc-header">
         <h1 class="logo">
-          <img src="img/logo.png" alt="logo">
+          <img src="img/logo.webp" alt="logo">
         </h1>
-        <div class="header-greeting">
-          <p></p>
-          <a href="" class="logout-btn">
-            <svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 1h7v1H2v11h6v1H1V1Zm9.854 3.146 3.34 3.34-3.327 3.603-.734-.678L12.358 8H4V7h8.293l-2.147-2.146.708-.708Z" fill="#fff"/></svg>
-            <span>LOGOUT</span>
-          </a>
-        </div>
+       
       </div>
 
       <div class="mo-header">
@@ -69,37 +65,20 @@
       <div class="leftmenu">
         <ul class="gnb">
           <li>
-            <a href="#" class="menu-label"><span></span><i class="icon-arrow12"></i></a>
+            <a href="#" class="menu-label"><span>Royalty</span><i class="icon-arrow12"></i></a>
             <ul class="sub-menu">
-              <li><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href=""></a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href=""></a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href=""></a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href=""></a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href=""></a></li>
+              <li><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="">Overview</a></li>
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="">Analysis</a></li>
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="">Statement</a></li>
             </ul>
           </li>
           <li>
-            <a href="#" class="menu-label"><span></span><i class="icon-arrow12"></i></a>
+            <a href="#" class="menu-label"><span>Miscellaneous</span><i class="icon-arrow12"></i></a>
             <ul class="sub-menu">
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href=""></a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href=""></a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href=""></a></li>
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="">Contact Us</a></li>
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="">Board</a></li>
             </ul>
-          </li>
-          <li>
-            <a href="#" class="menu-label"><span></span><i class="icon-arrow12"></i></a>
-            <ul class="sub-menu">
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href=""></a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href=""></a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="menu-label"><span></span><i class="icon-arrow12"></i></a>
-            <ul class="sub-menu">
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href=""></a></li>
-            </ul>
-          </li>
-          
+          </li>          
         </ul>
       </div>
     </div>
@@ -111,16 +90,23 @@
           <li>
             <div class="favorite-item active">
               <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
-              <a data-path="" href="">menu1</a>
+              <a data-path="" href="">Analysis</a>
             </div>
           </li>
           <li>
             <div class="favorite-item">
               <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
-              <a data-path="" href="">manu2</a>
+              <a data-path="" href="">Statement</a>
             </div>
           </li>
         </ul>
+        <div class="user-btn">
+          <button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person13"></i> 이동윤(개발자)님</button>
+          <ul class="mypage-wrap">
+						<li><a href="/mypage"><i class="icon-business09"></i> Change Password</a></li>
+						<li class="logout"><a href=""><i class="icon-arrow86"></i> Logout</a></li>
+					</ul>
+        </div>
       </div>
       <div class="content-wrap">
         <div class="content-inner">
@@ -442,12 +428,7 @@
         
       </div>
       <div class="footer">
-        <ul>
-          <li><b>회사명</b><span>company_name</span></li>
-          <li><b>대표자</b><span>name</span></li>
-          
-        </ul>
-        
+        <span class="copy mont">COPYRIGHT(C) 2024 . ALL RIGHTS RESERVED.</span>       
       </div>
     </div>
   </div>

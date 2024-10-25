@@ -1,6 +1,8 @@
 $(function(){
   leftMenu();
   toggleFavorite();
+  
+  if ($('.js-btn-mypage').length > 0) {btnMypage();}
 
   $('.mo-header-menu-btn').click(function(){
     $('body').toggleClass('no-scroll');
@@ -16,15 +18,20 @@ function toggleFavorite(){
   })
 }
 function leftMenu(){
-  $('.sub-menu').hide();
+  //$('.sub-menu').hide();
   $('.menu-label').click(function(e){
     if($(this).attr('href') == '#'){
       e.preventDefault();
-    }
-    
+    }    
     $(this).toggleClass('active');
     $(this).next('.sub-menu').slideToggle();
 
   })
+}
+function btnMypage(){
+	$('.js-btn-mypage').click(function(){
+		$(this).toggleClass('open');
+		$(this).next('.mypage-wrap').toggleClass('open');
+	})
 }
 
