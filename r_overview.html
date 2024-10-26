@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/cncicon.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -64,16 +65,16 @@
           <li>
             <a href="#" class="menu-label"><span>Royalty</span><i class="icon-arrow12"></i></a>
             <ul class="sub-menu">
-              <li class="current-menu"><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="">Overview</a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="">Analysis</a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="">Statement</a></li>
+              <li class="current-menu"><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_overview.html">Overview</a></li>
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="r_analysis.html">Analysis</a></li>
+              <li><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_statement.html">Statement</a></li>
             </ul>
           </li>
           <li>
             <a href="#" class="menu-label"><span>Miscellaneous</span><i class="icon-arrow12"></i></a>
             <ul class="sub-menu">
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="">Contact Us</a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="">Board</a></li>
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="m_contact.html">Contact Us</a></li>
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="m_board.html">Board</a></li>
             </ul>
           </li>
         </ul>
@@ -100,8 +101,8 @@
         <div class="user-btn">
           <button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person13"></i> 이동윤(개발자)님</button>
           <ul class="mypage-wrap">
-            <li><a href="/mypage"><i class="icon-business09"></i> Change Password</a></li>
-            <li class="logout"><a href=""><i class="icon-arrow86"></i> Logout</a></li>
+            <li><a href="/mypage.html"><i class="icon-business09"></i> Change Password</a></li>
+            <li class="logout"><a href="/login.html"><i class="icon-arrow86"></i> Logout</a></li>
           </ul>
         </div>
       </div>
@@ -123,7 +124,67 @@
           </div>
 
           <div>
-            <p class="f18">2020.07.01 ~ 2020.12.31</p>
+            
+            <div class="board-wrap">
+              <div class="board-title">
+                <p><i class="icon-paper22"></i> 2023.07 - 2023.12</p>
+              </div>
+              <div class="board-list">
+                <table>
+                  <thead>
+                    <tr>
+                      <th data-title="Collection Term">Collection Term</th>
+                      <th data-title="Income Source">Income Source</th>
+                      <th data-title="Territory">Territory</th>
+                      <th data-title="Currency">Currency</th>
+                      <th data-title="Royalty Amount">Royalty Amount <small>(Local Currency)</small></th>
+                      <th data-title="Royalty Payable">Royalty Payable <small>(KRW)</small></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-title="Collection Term">2023.07 - 2023.12</td>
+                      <td data-title="Income Source">Music Cube, Inc.</td>
+                      <td data-title="Territory">WORLD(Post Term)</td>
+                      <td data-title="Currency">Korea Won</td>
+                      <td data-title="Royalty Amount">144,957</td>
+                      <td data-title="Royalty Payable">144,957</td>
+                    </tr>
+                    <tr>
+                      <td data-title="Collection Term">2023.07 - 2023.12</td>
+                      <td data-title="Income Source">KOMCA</td>
+                      <td data-title="Territory">KOREA</td>
+                      <td data-title="Currency">Korea Won</td>
+                      <td data-title="Royalty Amount">12,533,000</td>
+                      <td data-title="Royalty Payable">12,533,000</td>
+                    </tr>
+                    <tr>
+                      <td data-title="Collection Term">2023.10 - 2023.12</td>
+                      <td data-title="Income Source">Kobalt Music Group</td>
+                      <td data-title="Territory">WORLD (excluding Korea & Japan)</td>
+                      <td data-title="Currency">U.S Dollar</td>
+                      <td data-title="Royalty Amount">2</td>
+                      <td data-title="Royalty Payable">3,000</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="5" class="td-left">Royalty Paid</td>
+                      <td>12,680,957</td>
+                    </tr>
+                    <tr>
+                      <td colspan="5" class="td-left">Withhold Tax <small>(3.3%)</small></td>
+                      <td>418,472</td>
+                    </tr>
+                    <tr>
+                      <td colspan="5" class="td-left emp">Grand Total</td>
+                      <td class="emp">12,262,485</td>
+                    </tr>
+                  </tfoot>
+
+                </table>
+              </div>
+            </div>
 
           </div>
 
@@ -150,7 +211,7 @@
   //막대차트
   var ctx = document.getElementById("barmix").getContext('2d');
   var data = {
-    labels: ['2020 H2','2021 H1','2021 H2','2022 H1','2022 H2','2023 H1','2023 H2','2024 H1'],
+    labels: ['2020 - H2','2021 - H1','2021 - H2','2022 - H1','2022 - H2','2023 - H1','2023 - H2','2024 - H1'],
     datasets: [
       {
         label: 'Royalty',
@@ -165,6 +226,7 @@
       position: 'top',
       align: "end",
       fullWidth: false,
+      display: false,
       labels:{
           fontFamily: "'poppin','Pretendard-Regular','arial', 'Verdana', 'Dotum', 'AppleGothic', 'sans-serif'",
           fontStyle:'600',
@@ -195,7 +257,7 @@
             fontSize:14,
             fontColor: '#888',
             callback: function(value, index, values) {
-              return value.toLocaleString() + '원';
+              return value.toLocaleString();
             }
           }
         },
