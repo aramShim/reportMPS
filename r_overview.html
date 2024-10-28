@@ -28,7 +28,10 @@
 
     <script src="js/jquery.min.js"></script>
     <!--chart-->
-	  <script src="lib/chartjs/Chart.bundle.min.js"></script>
+	  <!-- <script src="lib/chartjs/Chart.bundle.min.js"></script> -->
+    <script src="lib/chartjs/Chart.bundle.min.js"></script>
+    
+      
     <script src="js/ui.js"></script>
     
 </head>
@@ -273,7 +276,10 @@
           lineHeight: 1.6
         },
       }
-    }
+    },
+  
+   
+  
 
   }
   var barChart = new Chart(ctx, {
@@ -281,6 +287,18 @@
     data: data,
     options: barOption
   });
+
+  // 차트 클릭이벤트
+  barChart.ctx.canvas.onclick = (evt)=>{
+    const points = barChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
+    
+    if (points.length) {
+        const firstPoint = points[0];
+        const label = barChart.data.labels[firstPoint._index];                             
+        console.log(label); //클릭한 label 표시
+    }
+
+  }
 
 </script>
 </body>
