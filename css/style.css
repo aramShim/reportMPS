@@ -241,6 +241,10 @@ body {scroll-behavior: smooth;}
 .i-paper-download {line-height: 1.3;}
 .i-paper-download:before {content:'\e9c8'; font-family:'cncicon'; display: block; text-align: center;}
 
+.contact-wrap {margin-bottom: 80px; text-align: center;}
+.contact-wrap h2 {font-size: 38px;}
+.contact-wrap p {color: #777;}
+
 
 
 /*footer*/

@@ -113,7 +113,7 @@ a.btn.btn-square i[class*="icon-"] {padding: 0;}
 .board-title {margin-bottom: 16px;}
 .board-wrap .board-title.flex {display: flex; align-items: center; justify-content: space-between;}
 .board-title p { font-size: 18px;}
-.board-title p i {display: inline-block; padding-right: 4px;}
+.board-title p i {display: inline-block; padding-right: 4px; vertical-align: middle;}
 .board-list table {width: 100%;border-collapse: separate;table-layout: fixed; } 
 .board-list table td.td-left {text-align: left;}
 .board-list table td.td-right {text-align: right;}
