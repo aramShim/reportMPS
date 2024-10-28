@@ -111,6 +111,7 @@ a.btn.btn-square i[class*="icon-"] {padding: 0;}
  * **************************************** */
 /*리스트*/
 .board-title {margin-bottom: 16px;}
+.board-wrap .board-title.flex {display: flex; align-items: center; justify-content: space-between;}
 .board-title p { font-size: 18px;}
 .board-title p i {display: inline-block; padding-right: 4px;}
 .board-list table {width: 100%;border-collapse: separate;table-layout: fixed; } 
@@ -136,6 +137,13 @@ a.btn.btn-square i[class*="icon-"] {padding: 0;}
 
 .board-list table>tfoot>tr>td:first-child {padding-left: 16px;} 
 .board-list table>tfoot>tr>td:last-child {padding-right: 16px; } 
+
+
+.board-row-list table {width: 100%; border-collapse: separate; table-layout: fixed; border: 1px solid #888; border: 1px solid #888; border-radius: 10px; overflow: hidden;}
+.board-row-list table>tbody>tr>th {padding: 12px 10px; background-color: #f6f6f6; border-bottom: 1px solid #cbcbcb;}
+.board-row-list table>tbody>tr>td {padding: 12px 10px; border-bottom: 1px solid #cbcbcb; border-left: 1px solid #cbcbcb} 
+.board-row-list table>tbody>tr:last-child >th,
+.board-row-list table>tbody>tr:last-child >td {border-bottom: 0}
 
 /* 페이징 */
 .boarder-paging {margin-top: 40px; } 
@@ -170,7 +178,7 @@ a.btn.btn-square i[class*="icon-"] {padding: 0;}
 .board-view-title .board-title-info dl {display: flex; align-items: center; gap: 10px}
 .board-view-title .board-title-info dd {color: #808080;font-weight: 400; } 
 .board-view-content {margin-top: 10px; } 
-.board-view-inner {padding: 48px;border: 1px solid #c9c9c9;border-radius: 20px;background-color: #fff;word-break: keep-all;color: var(--color-gray2); } 
+.board-view-inner {padding: 36px;border: 1px solid #c9c9c9;border-radius: 10px;background-color: #fff;word-break: keep-all;color: var(--color-gray2); } 
 .board-view-inner * {font-family: 'Pretendard' !important;font-size: 16px !important;line-height: 1.7em !important; } 
 
 .btn-page-wrap {margin-top: 40px; } 
@@ -178,3 +186,6 @@ a.btn.btn-square i[class*="icon-"] {padding: 0;}
 .btn-pos-middle .btn {padding: 10px 20px; } 
 
 .underline:hover {color: var(--color-blue); text-decoration: underline;}
+.ck-editor__editable {
+    min-height: 500px;
+}
