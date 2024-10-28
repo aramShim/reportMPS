@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>report for MPS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimal-ui, viewport-fit=cover, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/cncicon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="js/jquery.min.js"></script>
+    <!--chart-->
+	  <!-- <script src="lib/chartjs/Chart.bundle.min.js"></script> -->
+    <script src="lib/chartjs/Chart.bundle.min.js"></script>
+    
+      
+    <script src="js/ui.js"></script>
+    
+</head>
+<body>
+  <div id="wrap" class="flex">
+    <div class="leftmenu-wrap">
+      <div class="pc-header">
+        <h1 class="logo">
+          <img src="img/logo.webp" alt="logo">
+        </h1>
+
+      </div>
+
+      <div class="mo-header">
+        <div class="flex">
+          <div class="mo-header-logo flex">
+            <button type="button" class="mo-header-menu-btn btn">
+              <div class="menu-wrap">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+            </button>
+            <h1 class="logo"><img src="img/logo.png" alt="logo"></h1>
+          </div>
+          <div class="mo-header-btn-wrap">
+            <a href="" class="mo-logout-btn btn">
+              <svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 1h7v1H2v11h6v1H1V1Zm9.854 3.146 3.34 3.34-3.327 3.603-.734-.678L12.358 8H4V7h8.293l-2.147-2.146.708-.708Z" fill="#fff"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="leftmenu">
+        <ul class="gnb">
+          <li>
+            <a href="#" class="menu-label"><span>Royalty</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li class="current-menu"><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_overview.html">Overview</a></li>
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="r_analysis.html">Analysis</a></li>
+              <li><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_statement.html">Statement</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>Miscellaneous</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="m_contact.html">Contact Us</a></li>
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="m_board.html">Board</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="content-header">
+        <!--북마크 없을경우 favorit-list 전체 삭제-->
+        <ul class="favorit-list flex">
+          <li>
+            <div class="favorite-item active">
+              <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
+              <a data-path="" href="">Analysis</a>
+            </div>
+          </li>
+          <li>
+            <div class="favorite-item">
+              <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
+              <a data-path="" href="">Statement</a>
+            </div>
+          </li>
+        </ul>
+        <div class="user-btn">
+          <button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person13"></i> 이동윤(개발자)님</button>
+          <ul class="mypage-wrap">
+            <li><a href="/mypage.html"><i class="icon-business09"></i> Change Password</a></li>
+            <li class="logout"><a href="/login.html"><i class="icon-arrow86"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-wrap">
+        <div class="content-inner">
+          <!--사용비율 차트-->
+          <div class="flex grid3 main-barchart-wrap">
+
+            <div class="item barmix-chart item2">
+              <div class="item-header">
+                <p><strong>Royalty</strong> <span class="gray">2020.07.01 ~ 2024.06.30</span></p>
+              </div>
+              <div class="item-body">
+                <div class="scroll-x">
+                  <canvas id="barmix" width="400" height="150" aria-label="지난 4년간 저작권내역" role="img"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            
+            <div class="board-wrap">
+              <div class="board-title">
+                <p><i class="icon-paper22"></i> 2023.07 - 2023.12</p>
+              </div>
+              <div class="board-list">
+                <table>
+                  <thead>
+                    <tr>
+                      <th data-title="Collection Term">Collection Term</th>
+                      <th data-title="Income Source">Income Source</th>
+                      <th data-title="Territory">Territory</th>
+                      <th data-title="Currency">Currency</th>
+                      <th data-title="Royalty Amount">Royalty Amount <small>(Local Currency)</small></th>
+                      <th data-title="Royalty Payable">Royalty Payable <small>(KRW)</small></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-title="Collection Term">2023.07 - 2023.12</td>
+                      <td data-title="Income Source">Music Cube, Inc.</td>
+                      <td data-title="Territory">WORLD(Post Term)</td>
+                      <td data-title="Currency">Korea Won</td>
+                      <td data-title="Royalty Amount">144,957</td>
+                      <td data-title="Royalty Payable">144,957</td>
+                    </tr>
+                    <tr>
+                      <td data-title="Collection Term">2023.07 - 2023.12</td>
+                      <td data-title="Income Source">KOMCA</td>
+                      <td data-title="Territory">KOREA</td>
+                      <td data-title="Currency">Korea Won</td>
+                      <td data-title="Royalty Amount">12,533,000</td>
+                      <td data-title="Royalty Payable">12,533,000</td>
+                    </tr>
+                    <tr>
+                      <td data-title="Collection Term">2023.10 - 2023.12</td>
+                      <td data-title="Income Source">Kobalt Music Group</td>
+                      <td data-title="Territory">WORLD (excluding Korea & Japan)</td>
+                      <td data-title="Currency">U.S Dollar</td>
+                      <td data-title="Royalty Amount">2</td>
+                      <td data-title="Royalty Payable">3,000</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="5" class="td-left">Royalty Paid</td>
+                      <td>12,680,957</td>
+                    </tr>
+                    <tr>
+                      <td colspan="5" class="td-left">Withhold Tax <small>(3.3%)</small></td>
+                      <td>418,472</td>
+                    </tr>
+                    <tr>
+                      <td colspan="5" class="td-left emp">Grand Total</td>
+                      <td class="emp">12,262,485</td>
+                    </tr>
+                  </tfoot>
+
+                </table>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+
+      </div>
+      <div class="footer">
+        <span class="copy mont">COPYRIGHT(C) 2024 . ALL RIGHTS RESERVED.</span>
+      </div>
+    </div>
+  </div>
+  <!--//#wrap-->
+  <!--차트 스크립트-->
+<script>
+  //Global 옵션
+	Chart.defaults.global.defaultFontFamily = "'poppin','Pretendard-Regular'";
+	Chart.defaults.global.defaultFontColor = 'black';
+	Chart.defaults.global.defaultFontSize = 13;
+
+
+  //막대차트
+  var ctx = document.getElementById("barmix").getContext('2d');
+  var data = {
+    labels: ['2020 - H2','2021 - H1','2021 - H2','2022 - H1','2022 - H2','2023 - H1','2023 - H2','2024 - H1'],
+    datasets: [
+      {
+        label: 'Royalty',
+        yAxisID: 'B',
+        data: [336340,341510,311430,274020,281050,310830,348071,336340],
+        backgroundColor: '#bd256e'
+      }
+    ]
+  };
+  var barOption = {
+    legend : {
+      position: 'top',
+      align: "end",
+      fullWidth: false,
+      display: false,
+      labels:{
+          fontFamily: "'poppin','Pretendard-Regular','arial', 'Verdana', 'Dotum', 'AppleGothic', 'sans-serif'",
+          fontStyle:'600',
+          fontSize:14,
+          boxWidth:8,
+          padding: 10,
+          usePointStyle:true,
+          pointStyle:'circle',
+        }
+    },
+    tooltips:{
+      enabled: true,
+      callbacks:{
+        label: function(tooltipItem, data){
+          var indice = tooltipItem.datasetIndex;
+          return data.datasets[indice].label +' : '+ Number(tooltipItem.value).toLocaleString()
+        }
+      }
+    },
+    scales:{
+      yAxes: [
+
+         {
+          id: 'B',
+          type: 'linear',
+          position: 'right',
+          ticks: {
+            fontSize:14,
+            fontColor: '#888',
+            callback: function(value, index, values) {
+              return value.toLocaleString();
+            }
+          }
+        },
+      ]
+    },
+    plugins :{
+      datalabels: {
+        color: 'transparent',
+        textAlign: 'center',
+        font: {
+          lineHeight: 1.6
+        },
+      }
+    },
+  
+   
+  
+
+  }
+  var barChart = new Chart(ctx, {
+    type: 'bar',
+    data: data,
+    options: barOption
+  });
+
+  // 차트 클릭이벤트
+  barChart.ctx.canvas.onclick = (evt)=>{
+    const points = barChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
+    
+    if (points.length) {
+        const firstPoint = points[0];
+        const label = barChart.data.labels[firstPoint._index];                             
+        console.log(label); //클릭한 label 표시
+    }
+
+  }
+
+</script>
+</body>
+</html>
