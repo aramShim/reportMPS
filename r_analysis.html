@@ -114,15 +114,18 @@
       <div class="content-wrap">
         <div class="content-inner">
           <!--사용비율 차트-->
-          <div class="flex grid3 main-barchart-wrap">
+          <div class="flex grid2 main-barchart-wrap">
 
-            <div class="item barmix-chart item2">
+            <div class="item barmix-chart item1">
               <div class="item-header">
-                <p><strong>Royalty</strong> <span class="gray">2020.07.01 ~ 2024.06.30</span></p>
+                <p class="flex">
+                  <strong>Top Song</strong>
+                  <button type="button" class="">+more</button>
+                </p>
               </div>
               <div class="item-body">
                 <div class="scroll-x">
-                  <canvas id="barmix" width="400" height="150" aria-label="지난 4년간 저작권내역" role="img"></canvas>
+                  <canvas id="piechart1" width="400" height="260" aria-label="title" role="img"></canvas>
                 </div>
               </div>
             </div>
@@ -132,70 +135,36 @@
             
             <div class="board-wrap">
               <div class="board-title">
-                <p><i class="icon-paper22"></i> 2023.07 - 2023.12</p>
+                <p>Song list</p>
               </div>
               <div class="board-list">
                 <table>
                   <thead>
                     <tr>
-                      <th data-title="Collection Term">Collection Term</th>
-                      <th data-title="Income Source">Income Source</th>
-                      <th data-title="Territory">Territory</th>
-                      <th data-title="Currency">Currency</th>
-                      <th data-title="Royalty Amount">Royalty Amount <small>(Local Currency)</small></th>
-                      <th data-title="Royalty Payable">Royalty Payable <small>(KRW)</small></th>
+                      <th data-title="Song Title">Song Title</th>
+                      <th data-title="Amount">Amount</th>
+                      
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td data-title="Collection Term">2023.07 - 2023.12</td>
-                      <td data-title="Income Source">Music Cube, Inc.</td>
-                      <td data-title="Territory">WORLD(Post Term)</td>
-                      <td data-title="Currency">Korea Won</td>
-                      <td data-title="Royalty Amount">144,957</td>
-                      <td data-title="Royalty Payable">144,957</td>
+                      <td data-title="Song Title">Song Title</td>
+                      <td data-title="Amount">Amount</td>
                     </tr>
                     <tr>
-                      <td data-title="Collection Term">2023.07 - 2023.12</td>
-                      <td data-title="Income Source">KOMCA</td>
-                      <td data-title="Territory">KOREA</td>
-                      <td data-title="Currency">Korea Won</td>
-                      <td data-title="Royalty Amount">12,533,000</td>
-                      <td data-title="Royalty Payable">12,533,000</td>
+                      <td data-title="Song Title">Song Title</td>
+                      <td data-title="Amount">Amount</td>
                     </tr>
                     <tr>
-                      <td data-title="Collection Term">2023.10 - 2023.12</td>
-                      <td data-title="Income Source">Kobalt Music Group</td>
-                      <td data-title="Territory">WORLD (excluding Korea & Japan)</td>
-                      <td data-title="Currency">U.S Dollar</td>
-                      <td data-title="Royalty Amount">2</td>
-                      <td data-title="Royalty Payable">3,000</td>
+                      <td data-title="Song Title">Song Title</td>
+                      <td data-title="Amount">Amount</td>
                     </tr>
                   </tbody>
-                  <tfoot>
-                    <tr>
-                      <td colspan="5" class="td-left">Royalty Paid</td>
-                      <td>12,680,957</td>
-                    </tr>
-                    <tr>
-                      <td colspan="5" class="td-left">Withhold Tax <small>(3.3%)</small></td>
-                      <td>418,472</td>
-                    </tr>
-                    <tr>
-                      <td colspan="5" class="td-left emp">Grand Total</td>
-                      <td class="emp">12,262,485</td>
-                    </tr>
-                  </tfoot>
-
+                  
                 </table>
               </div>
             </div>
-
           </div>
-
-
-
-
         </div>
 
       </div>
@@ -212,93 +181,74 @@
 	Chart.defaults.global.defaultFontColor = 'black';
 	Chart.defaults.global.defaultFontSize = 13;
 
+  var ctx1 = document.getElementById('piechart1').getContext('2d');
 
-  //막대차트
-  var ctx = document.getElementById("barmix").getContext('2d');
-  var data = {
-    labels: ['2020 - H2','2021 - H1','2021 - H2','2022 - H1','2022 - H2','2023 - H1','2023 - H2','2024 - H1'],
-    datasets: [
-      {
-        label: 'Royalty',
-        yAxisID: 'B',
-        data: [336340,341510,311430,274020,281050,310830,348071,336340],
-        backgroundColor: '#bd256e'
-      }
-    ]
-  };
-  var barOption = {
-    legend : {
-      position: 'top',
-      align: "end",
-      fullWidth: false,
-      display: false,
-      labels:{
-          fontFamily: "'poppin','Pretendard-Regular','arial', 'Verdana', 'Dotum', 'AppleGothic', 'sans-serif'",
-          fontStyle:'600',
-          fontSize:14,
-          boxWidth:8,
-          padding: 10,
-          usePointStyle:true,
-          pointStyle:'circle',
-        }
-    },
-    tooltips:{
-      enabled: true,
-      callbacks:{
-        label: function(tooltipItem, data){
-          var indice = tooltipItem.datasetIndex;
-          return data.datasets[indice].label +' : '+ Number(tooltipItem.value).toLocaleString()
-        }
-      }
-    },
-    scales:{
-      yAxes: [
-
-         {
-          id: 'B',
-          type: 'linear',
-          position: 'right',
-          ticks: {
-            fontSize:14,
-            fontColor: '#888',
-            callback: function(value, index, values) {
-              return value.toLocaleString();
-            }
-          }
-        },
-      ]
-    },
-    plugins :{
-      datalabels: {
-        color: 'transparent',
-        textAlign: 'center',
-        font: {
-          lineHeight: 1.6
-        },
-      }
-    },
-  
+  var data1 = {
+		labels: ["WANNABE", "LOCO","SET ME FREE","DALLA DALLA","I AM"],
+		  datasets: [
+			{
+				fill: true,
+				backgroundColor: ['#019fe0', '#bd256e', "#efdf41","#d4d4d4"],
+				data: [130854066,81570323,40383538,64511949,11890455]
+			}
+		]
+	};
+  var options = {
    
-  
+   legend : {
+     position: 'right',
+     fullWidth: false,
+     labels:{
+         fontFamily: "'poppin','Pretendard-Regular', 'Dotum', 'AppleGothic', 'sans-serif'",
+         fontStyle:'600',
+         fontSize:13,
+         boxWidth:8,
+         padding: 10,
+         usePointStyle:true,
+         pointStyle:'circle',          
+       }
+   },
+   elements: {
+     arc: {
+       borderWidth: 0, // <-- Set this to derired value
+       borderColor:'#fff'
+     }
+   },
+   //rotation: -1 * Math.PI,
+   tooltips:{
+     enabled: true,
+     callbacks:{
+       label: function(tooltipItem, data){
+         var indice = tooltipItem.index;           
+         let result = data.datasets[0].data[indice].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');      
+         return  data.labels[indice] +' : '+ result;
+       }
+     }
+   },
+   plugins :{
+     datalabels: {
+       color: '#fff',
+       textAlign: 'center',
+       formatter: function(value, ctx) {
+         if (value > 0)
+         {
+           return value;
+         }else {
+           return '';
+         }
+         
+       }
+     }
+   },
+   
+ };
+ 
+ var homeChart1 = new Chart(ctx1, {
+   type: 'pie',
+   data: data1,
+   options: options
+ });	
 
-  }
-  var barChart = new Chart(ctx, {
-    type: 'bar',
-    data: data,
-    options: barOption
-  });
-
-  // 차트 클릭이벤트
-  barChart.ctx.canvas.onclick = (evt)=>{
-    const points = barChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
-    
-    if (points.length) {
-        const firstPoint = points[0];
-        const label = barChart.data.labels[firstPoint._index];                             
-        console.log(label); //클릭한 label 표시
-    }
-
-  }
 
 </script>
 </body>
