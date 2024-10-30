@@ -113,15 +113,20 @@
       </div>
       <div class="content-wrap">
         <div class="content-inner">
-          <!--사용비율 차트-->
-          <div class="flex grid3 main-barchart-wrap">
-
-            <div class="item barmix-chart item1">
-              <div class="item-header">
+          <ul class="analysis_tab">
+            <li><a href="">song</a></li>
+            <li><a href="">territory</a></li>
+            <li><a href="">income type</a></li>
+            <li><a href="">source</a></li>
+          </ul>
+          <!--차트-->
+          <div class="flex grid3">
+            <div class="item item1">
+              <div class="item-header flex space-between">
                 <p class="flex">
                   <strong>Top Song</strong>
-                  <button type="button" class="">+more</button>
                 </p>
+                <button type="button" class="btn btn-xsm btn-outline btn-outline-bg gray">+ more</button>
               </div>
               <div class="item-body">
                 <div class="scroll-x">
@@ -206,7 +211,15 @@
 		  datasets: [
 			{
 				fill: true,
-				backgroundColor: ['#019fe0', '#bd256e', "#efdf41","#d4d4d4"],
+				backgroundColor: [
+          'rgba(255, 99, 132, 0.9)',
+          'rgba(255, 159, 64, 0.9)',
+          'rgba(255, 205, 86, 0.9)',
+          'rgba(75, 192, 192, 0.9)',
+          'rgba(54, 162, 235, 0.9)',
+          'rgba(153, 102, 255, 0.9)',
+          'rgba(201, 203, 207, 0.9)'
+        ],
 				data: [130854066,81570323,40383538,64511949,11890455]
 			}
 		]
