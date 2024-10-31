@@ -18,6 +18,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,300,0,200" />
 
     <link rel="stylesheet" href="css/reset.css">
@@ -69,8 +70,8 @@
           <li>
             <a href="#" class="menu-label"><span>Royalty</span><i class="icon-arrow12"></i></a>
             <ul class="sub-menu">
-              <li class="current-menu"><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_overview.html">Overview</a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="r_analysis_song.html">Analysis</a></li>
+              <li><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_overview.html">Overview</a></li>
+              <li class="current-menu"><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="r_analysis_song.html">Analysis</a></li>
               <li><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_statement.html">Statement</a></li>
             </ul>
           </li>
@@ -90,15 +91,20 @@
         <!--북마크 없을경우 favorit-list 전체 삭제-->
         <ul class="favorit-list flex">
           <li>
-            <div class="favorite-item active">
-              <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
-              <a data-path="" href="">Analysis</a>
+            <div class="favorite-item">              
+              <a data-path="" href="index.html">Home</a>
             </div>
           </li>
           <li>
             <div class="favorite-item">
               <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
-              <a data-path="" href="">Statement</a>
+              <a data-path="" href="r_overview.html">Overview</a>
+            </div>
+          </li>
+          <li>
+            <div class="favorite-item">
+              <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
+              <a data-path="" href="r_statement.html">Statement</a>
             </div>
           </li>
         </ul>

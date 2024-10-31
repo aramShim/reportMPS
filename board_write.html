@@ -40,7 +40,7 @@
     <div class="leftmenu-wrap">
       <div class="pc-header">
         <h1 class="logo">
-          <img src="img/logo.webp" alt="logo">
+          <a href="index.html"><img src="img/logo.webp" alt="logo"></a>
         </h1>
 
       </div>
@@ -55,7 +55,7 @@
                 <span class="line"></span>
               </div>
             </button>
-            <h1 class="logo"><img src="img/logo.png" alt="logo"></h1>
+            <h1 class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></h1>
           </div>
           <div class="mo-header-btn-wrap">
             <a href="" class="mo-logout-btn btn">
@@ -70,7 +70,7 @@
           <li>
             <a href="#" class="menu-label"><span>Royalty</span><i class="icon-arrow12"></i></a>
             <ul class="sub-menu">
-              <li class="current-menu"><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_overview.html">Overview</a></li>
+              <li><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_overview.html">Overview</a></li>
               <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="r_analysis_song.html">Analysis</a></li>
               <li><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_statement.html">Statement</a></li>
             </ul>
@@ -79,7 +79,7 @@
             <a href="#" class="menu-label"><span>Miscellaneous</span><i class="icon-arrow12"></i></a>
             <ul class="sub-menu">
               <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="m_contact.html">Contact Us</a></li>
-              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="m_board.html">Board</a></li>
+              <li class="current-menu"><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="m_board.html">Board</a></li>
             </ul>
           </li>
         </ul>
@@ -91,15 +91,20 @@
         <!--북마크 없을경우 favorit-list 전체 삭제-->
         <ul class="favorit-list flex">
           <li>
-            <div class="favorite-item active">
-              <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
-              <a data-path="" href="">Analysis</a>
+            <div class="favorite-item">
+              <a data-path="" href="index.html">Home</a>
             </div>
           </li>
           <li>
             <div class="favorite-item">
               <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
-              <a data-path="" href="">Statement</a>
+              <a data-path="" href="r_overview.html">Overview</a>
+            </div>
+          </li>
+          <li>
+            <div class="favorite-item">
+              <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
+              <a data-path="" href="r_statement.html">Statement</a>
             </div>
           </li>
         </ul>
