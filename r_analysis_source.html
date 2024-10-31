@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>report for MPS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimal-ui, viewport-fit=cover, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,300,0,200" />
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/cncicon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="js/jquery.min.js"></script>
+    <!--chart-->
+    <script src="lib/chartjs/Chart.bundle.min.js"></script>
+    <script src="lib/chartjs/chartjs-plugin-labels.js"></script>
+    
+      
+    <script src="js/ui.js"></script>
+    
+</head>
+<body>
+  <div id="wrap" class="flex">
+    <div class="leftmenu-wrap">
+      <div class="pc-header">
+        <h1 class="logo">
+          <img src="img/logo.webp" alt="logo">
+        </h1>
+
+      </div>
+
+      <div class="mo-header">
+        <div class="flex">
+          <div class="mo-header-logo flex">
+            <button type="button" class="mo-header-menu-btn btn">
+              <div class="menu-wrap">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+            </button>
+            <h1 class="logo"><img src="img/logo.png" alt="logo"></h1>
+          </div>
+          <div class="mo-header-btn-wrap">
+            <a href="" class="mo-logout-btn btn">
+              <svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 1h7v1H2v11h6v1H1V1Zm9.854 3.146 3.34 3.34-3.327 3.603-.734-.678L12.358 8H4V7h8.293l-2.147-2.146.708-.708Z" fill="#fff"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="leftmenu">
+        <ul class="gnb">
+          <li>
+            <a href="#" class="menu-label"><span>Royalty</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li class="current-menu"><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_overview.html">Overview</a></li>
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="r_analysis_song.html">Analysis</a></li>
+              <li><div class="btn-favorite active" data-path="" data-label=""><i class="icon-icon36"></i></div><a href="r_statement.html">Statement</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu-label"><span>Miscellaneous</span><i class="icon-arrow12"></i></a>
+            <ul class="sub-menu">
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="m_contact.html">Contact Us</a></li>
+              <li><div class="btn-favorite" data-path="" data-label=""><i class="icon-icon34"></i></div><a href="m_board.html">Board</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="content">
+      <div class="content-header">
+        <!--북마크 없을경우 favorit-list 전체 삭제-->
+        <ul class="favorit-list flex">
+          <li>
+            <div class="favorite-item active">
+              <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
+              <a data-path="" href="">Analysis</a>
+            </div>
+          </li>
+          <li>
+            <div class="favorite-item">
+              <button type="button" class="btn-remove-favorite" data-path=""><i class="icon-sign07"></i></button>
+              <a data-path="" href="">Statement</a>
+            </div>
+          </li>
+        </ul>
+        <div class="user-btn">
+          <button type="button" class="top-btn-mypage js-btn-mypage"><i class="icon-person13"></i> 이동윤(개발자)님</button>
+          <ul class="mypage-wrap">
+            <li><a href="/mypage.html"><i class="icon-business09"></i> Change Password</a></li>
+            <li class="logout"><a href="/login.html"><i class="icon-arrow86"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-wrap">
+        <div class="content-inner">
+          <ul class="analysis_tab flex">
+            <li><a href="r_analysis_song.html"><span class="material-symbols-rounded">genres</span>Song</a></li>
+            <li><a href="r_analysis_territory.html"><i class="icon-map19"></i> Territory</a></li>
+            <li><a href="r_analysis_type.html"><i class="icon-finance02"></i> Income type</a></li>
+            <li><a href="r_analysis_source.html" class="on"><i class="icon-paper08"></i> Source</a></li>
+          </ul>
+          <div class="flex grid3" style="padding-bottom: 0;">
+            <div class="item"></div>
+            <div class="item item2">
+              <div class="item-header">
+                <select name="" id="" class="form-select">
+                  <option value="">2024-1H</option>
+                  <option value="">2023-2H</option>
+                  <option value="">2023-1H</option>
+                  <option value="">2022-2H</option>
+                  <option value="">2022-1H</option>
+                  <option value="">2021-2H</option>
+                  <option value="">2021-1H</option>
+                  <option value="">2020-2H</option>
+                  <option value="">2020-1H</option>                  
+                </select>
+              </div>              
+            </div>
+          </div>
+          <!--차트-->
+          <div class="flex grid3 analysis-wrap">
+            <div class="item item1">
+              <div class="item-header">
+                <p class="flex">
+                  <strong>Top Source</strong>
+                </p>
+                
+              </div>
+              <div class="item-body">
+                <div class="scroll-x">
+                  <canvas id="piechart1" width="400" height="260" aria-label="title" role="img"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item2 scrollbar-none">            
+              <div class="board-wrap">
+                <div class="board-list list-max-5">
+                  <table>
+                    <colgroup>
+                      <col width="10%">
+                      <col width="45%">
+                      <col width="45%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th data-title="No">No</th>  
+                        <th data-title="Song Title">Source</th>
+                        <th data-title="Amount">Royalties</th>                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-title="No">1</td>
+                        <td data-title="Song Title">Various</td>
+                        <td data-title="Amount"><small>KRW</small> 59,695,342</td>
+                      </tr>
+                      <tr>
+                        <td data-title="No">2</td>
+                        <td data-title="Song Title">Spotify-MLC</td>
+                        <td data-title="Amount"><small>KRW</small> 25,350,931</td>
+                      </tr>
+                      <tr>
+                        <td data-title="No">3</td>
+                        <td data-title="Song Title">Youtube</td>
+                        <td data-title="Amount"><small>KRW</small> 20,553,815</td>
+                      </tr>
+                      <tr>
+                        <td data-title="No">4</td>
+                        <td data-title="Song Title">BMG RM CANADA</td>
+                        <td data-title="Amount"><small>KRW</small> 20,077,616</td>
+                      </tr>
+                      <tr>
+                        <td data-title="No">5</td>
+                        <td data-title="Song Title">BMI</td>
+                        <td data-title="Amount"><small>KRW</small> 10,767,723</td>
+                      </tr>
+                      <tr>
+                        <td data-title="No">6</td>
+                        <td data-title="Song Title">LILAC</td>
+                        <td data-title="Amount"><small>KRW</small> 6,184,425</td>
+                      </tr>
+                      <tr>
+                        <td data-title="No">7</td>
+                        <td data-title="Song Title">PALETTE (FEAT.G-DRAGON)</td>
+                        <td data-title="Amount"><small>KRW</small> 6,184,425</td>
+                      </tr>
+                      <tr>
+                        <td data-title="No">8</td>
+                        <td data-title="Song Title">CAN'T STOP SHINING-TEMP</td>
+                        <td data-title="Amount"><small>KRW</small> 6,184,425</td>
+                      </tr>
+                      <tr>
+                        <td data-title="No">9</td>
+                        <td data-title="Song Title"></td>
+                        <td data-title="Amount"><small>KRW</small> 6,184,425</td>
+                      </tr>
+                      <tr>
+                        <td data-title="No">10</td>
+                        <td data-title="Song Title"></td>
+                        <td data-title="Amount"><small>KRW</small> 6,184,425</td>
+                      </tr>
+                      <tr>
+                        <td data-title="No">11</td>
+                        <td data-title="Song Title"></td>
+                        <td data-title="Amount"><small>KRW</small> 6,184,425</td>
+                      </tr>
+                    </tbody>
+                    
+                  </table>
+                  <div class="board-paging">
+                    <div class="paging-wrap">
+                      <div class="paging-content">
+                        <a href="" class="btn-first">처음</a>
+                        <a href="" class="btn-prev">이전</a>
+                        <ol class="paging-list">
+                          <li><a href="" class="actived">1</a></li>
+                          <li><a href="">2</a></li>
+                          <li><a href="">3</a></li>
+                          <li><a href="">4</a></li>
+                          <li><a href="">5</a></li>
+                          <li><a href="">6</a></li>
+                        </ol>
+                        <a href="" class="btn-next">다음</a>
+                        <a href="" class="btn-last">끝</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-xsm btn-outline btn-outline-bg gray more-btn">+ more</button>
+
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+      </div>
+      <div class="footer">
+        <span class="copy mont">COPYRIGHT(C) 2024 . ALL RIGHTS RESERVED.</span>
+      </div>
+    </div>
+  </div>
+  <!--//#wrap-->
+  <!--차트 스크립트-->
+<script>
+  //Global 옵션
+	Chart.defaults.global.defaultFontFamily = "'poppin','Pretendard-Regular'";
+	Chart.defaults.global.defaultFontColor = 'black';
+	Chart.defaults.global.defaultFontSize = 13;
+
+  var ctx1 = document.getElementById('piechart1').getContext('2d');
+
+  var data1 = {
+		labels: ["Various", "Spotify-MLC","Youtube","BMG RM CANADA","BMI"],
+		  datasets: [
+			{
+				fill: true,
+				backgroundColor: [
+          'rgba(255, 99, 132, 0.9)',
+          'rgba(255, 159, 64, 0.9)',
+          'rgba(255, 205, 86, 0.9)',
+          'rgba(75, 192, 192, 0.9)',
+          'rgba(54, 162, 235, 0.9)',
+          'rgba(153, 102, 255, 0.9)',
+          'rgba(201, 203, 207, 0.9)'
+        ],
+				data: [59695342,25350931,20553815,20077616,10767723]
+			}
+		]
+	};
+  var options = {
+   
+   legend : {
+     position: 'right',
+     fullWidth: false,
+     labels:{
+         fontFamily: "'poppin','Pretendard-Regular', 'Dotum', 'AppleGothic', 'sans-serif'",
+         fontStyle:'400',
+         fontSize:13,
+         boxWidth:6,
+         padding: 10,
+         usePointStyle:true,
+         pointStyle:'circle',          
+       }
+   },
+   elements: {
+     arc: {
+       borderWidth: 0, // <-- Set this to derired value
+       borderColor:'#fff'
+     }
+   },
+   //rotation: -1 * Math.PI,
+   tooltips:{
+     enabled: true,
+     callbacks:{
+       label: function(tooltipItem, data){
+         var indice = tooltipItem.index;           
+         let result = data.datasets[0].data[indice].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');      
+         return  data.labels[indice] +' : '+ result;
+       }
+     }
+   },
+   
+   plugins :{
+     labels: {
+       fontColor: 'white',
+       textAlign: 'center',
+       render:'percent'
+     }
+   },
+   
+ };
+ 
+ var homeChart1 = new Chart(ctx1, {
+   type: 'pie',
+   data: data1,
+   options: options
+ });	
+
+
+</script>
+</body>
+</html>

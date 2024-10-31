@@ -3,6 +3,8 @@ $(function(){
   toggleFavorite();
   
   if ($('.js-btn-mypage').length > 0) {btnMypage();}
+  if ($('.more-btn').length > 0) {moreBtn();}
+  
 
   $('.mo-header-menu-btn').click(function(){
     $('body').toggleClass('no-scroll');
@@ -35,3 +37,12 @@ function btnMypage(){
 	})
 }
 
+function moreBtn(){
+  $('.more-btn').click(function(){
+    $('.list-max-5').find('tr').each(function(){
+      $(this).css('display','table-row');
+    })
+    $('.board-paging').show();
+    $(this).hide();
+  })
+}

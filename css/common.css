@@ -123,7 +123,7 @@ a.btn.btn-square i[class*="icon-"] {padding: 0;}
 .board-list table>thead>tr>th:first-child {padding-left: 16px;border-left: 1px solid #888;border-top-left-radius: 10px;border-bottom-left-radius: 10px; }
 .board-list table>thead>tr>th:last-child {padding-right: 16px;border-right: 1px solid #888;border-top-right-radius: 10px;border-bottom-right-radius: 10px; } 
 
-.board-list table>tbody>tr>td {vertical-align: middle; padding: 16px 4px;color: #303030;font-weight: 400;text-align: center;border-top: 1px solid #ededed;border-bottom: 1px solid #ededed;vertical-align: middle;box-sizing: border-box; }
+.board-list table>tbody>tr>td {vertical-align: middle; padding: 16px 4px;color: #303030;font-weight: 400;text-align: center; border-bottom: 1px solid #ededed;vertical-align: middle;box-sizing: border-box; }
 .board-list table>tbody>tr>td:first-child {padding-left: 16px;}
 .board-list table>tbody>tr>td:last-child {padding-right: 16px; }
 .board-list table>tbody>tr>td > a {display: block}
@@ -145,11 +145,13 @@ a.btn.btn-square i[class*="icon-"] {padding: 0;}
 .board-row-list table>tbody>tr:last-child >th,
 .board-row-list table>tbody>tr:last-child >td {border-bottom: 0}
 
+.board-list small {font-weight: 500; font-size: .8em;}
+
 /* 페이징 */
-.boarder-paging {margin-top: 40px; } 
+.board-paging {margin-top: 40px; } 
 .paging-wrap {position: relative;display: flex;justify-content: center; } 
 .paging-content {position: relative;display: flex;align-items: center;justify-content: center;height: 32px;text-align: center; } 
-.paging-content>a {position: relative;display: block;min-width: 18px;height: 18px;font-size: 0px !important;background-color: #fff; } 
+.paging-content>a {position: relative;display: block;min-width: 18px;height: 18px;font-size: 0px !important; } 
 .paging-content>a:after,
 .paging-content>a:before {content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-position: center center;background-size: 18px auto;background-repeat: no-repeat; } 
 .paging-content .btn-first:before {background-image: url(../img/layout/btn-paging-first.png); } 
@@ -167,7 +169,7 @@ a.btn.btn-square i[class*="icon-"] {padding: 0;}
 .paging-content>a:hover:after {opacity: 1; } 
 .paging-content .paging-list {display: flex;align-items: center;margin: 0 8px; } 
 .paging-content .paging-list>li {display: inline-flex;align-items: center;justify-content: center;min-width: 32px;padding: 0 2px; } 
-.paging-content .paging-list>li a {position: relative;display: block;padding: 0 2px;padding: 0 10px;font-size: 16px;font-weight: 500;color: #252525;line-height: 30px;background-color: #fff;box-sizing: border-box; opacity: .4; } 
+.paging-content .paging-list>li a {position: relative;display: block;padding: 0 2px;padding: 0 10px;font-size: 16px;font-weight: 500;color: #252525;line-height: 30px;box-sizing: border-box; opacity: .4; } 
 .paging-content .paging-list>li a:hover,
 .paging-content .paging-list>li a.actived {opacity: 1;} 
 
@@ -189,3 +191,29 @@ a.btn.btn-square i[class*="icon-"] {padding: 0;}
 .ck-editor__editable {
     min-height: 500px;
 }
+/* **************************************** *
+ * select
+ * **************************************** */
+.form-select {
+    --bs-form-select-bg-img:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    display: block;
+    width: 100%;
+    padding: 6px 36px 6px 12px;
+    appearance: none; -webkit-appearance: none; -moz-appearance: none;
+    background: #fff var(--bs-form-select-bg-img) no-repeat right 6px center ;
+    background-size: 16px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color .15s ease-in-out;
+    text-align:center;
+}
+.form-select:focus{border-color: var(--color-blue); outline: 0;}
+
+/* **************************************** *
+ * SCROLLBAR
+ * **************************************** */
+ .scrollbar-none::-webkit-scrollbar-track {background-color: transparent;}
+ .scrollbar-none::-webkit-scrollbar {width: 0px;background-color: var(--color-bg);}
+ .scrollbar-none::-webkit-scrollbar-thumb {background-color: transparent;border-radius: 10px;}
+ /* set button(top and bottom of the scrollbar) */
+ .scrollbar-none::-webkit-scrollbar-button {display:none;}
