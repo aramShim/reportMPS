@@ -362,7 +362,17 @@ body {scroll-behavior: smooth;}
 }
 @media all and (max-width:788.99px){
   /*반응형테이블*/
-  .board-list colgroup {display: none;}
+  .board-list .board colgroup {display: none;}
+  .board thead {display: none;}
+  .board-list .board tbody tr {display: block; border-bottom: 1px solid #ededed; padding: 10px 0;}
+  .board-list .board tbody tr td {display: inline-flex; align-items: center; border: 0; padding: 0; padding-right: 16px;}
+  .board tbody tr td.dis-none {display: none;}
+  .board tbody tr td:not(.dis-none,.td-left):before {
+    font-weight: 500;
+    content: attr(data-title) ;
+    margin-right: 10px;
+  }
+  .board tbody tr td.td-left {display: flex;}
 
   /*반응형테이블*/
   .board-row-list colgroup{display: none;}
@@ -382,6 +392,9 @@ body {scroll-behavior: smooth;}
   .mo-header > .flex { padding: 0 20px;}
 
   .board-title {display: inline-block;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+  .board-view-title .board-title {font-size: 20px;  margin-bottom: 0;}
+  .board-view-inner {padding: 10px; border: 0; font-weight: 400}
+  
   .board-date1 {display: none;}
 
   .form-signin {border: 0;}
