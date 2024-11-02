@@ -227,9 +227,12 @@ body {scroll-behavior: smooth;}
 .contact-wrap p {color: #777;}
 
 /*analysis*/
-.analysis_tab a {display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 18px; background-color: var(--color-gray-bg); border-radius: 10px; border: 1px solid #ccc; color: #888;}
+.analysis_tab {padding-bottom: 40px; overflow: auto;}
+.analysis_tab .flex {gap: 10px;}
+.analysis_tab a {display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 18px; background-color: var(--color-gray-bg); border-radius: 10px; border: 1px solid #ccc; color: #888; white-space: nowrap;}
 .analysis_tab a:hover {color: #252525; border: 1px solid #252525;}
 .analysis_tab a.on {border: 1px solid var(--color-blue); background-color: var(--color-blue-bg); color: var(--color-blue)}
+.material-symbols-rounded {font-size: 21px;}
 .analysis-wrap .item2 {padding: 40px; border-radius: 10px; background-color: #f9f9f9; max-height: calc(100vh - 246px); overflow-y: auto;}
 .board-list.list-max-5 tbody tr {display: none;}
 .board-list.list-max-5 .board-paging {display: none;}
@@ -272,6 +275,10 @@ body {scroll-behavior: smooth;}
 }
 
 @media all and (max-width:1099.99px){
+  :root {
+    --layout-padding: 30px 20px;
+    --layout-padding-footer : 20px;
+  }
   body.no-scroll {overflow: hidden;}
   #wrap.flex {flex-flow: column; gap: 0px;}
 
@@ -359,10 +366,7 @@ body {scroll-behavior: smooth;}
 
 }
 @media all and (max-width:519.99px){
-  :root {
-    --layout-padding: 30px 20px;
-    --layout-padding-footer : 20px;
-  }
+  
   body, table, input, select, textarea, a, a:link, a:visited, a:hover, h1, h2, h3, h4, h5, h6, a, p {font-size: 14px;}
   .mo-header > .flex { padding: 0 20px;}
 
@@ -370,6 +374,8 @@ body {scroll-behavior: smooth;}
   .board-date1 {display: none;}
 
   .form-signin {border: 0;}
+  .analysis_tab {padding-bottom: 20px;}
+  .analysis-wrap .item2 {padding: 10px 10px;}
 }
 
 @media all and (max-width:455.99px){
