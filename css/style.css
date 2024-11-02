@@ -224,7 +224,7 @@ body {scroll-behavior: smooth;}
 
 .contact-wrap {margin-bottom: 80px; text-align: center;}
 .contact-wrap h2 {font-size: 38px;}
-.contact-wrap p {color: #777;}
+.contact-wrap p {color: #777; word-break: keep-all;}
 
 /*analysis*/
 .analysis_tab {padding-bottom: 40px; overflow: auto;}
@@ -362,7 +362,18 @@ body {scroll-behavior: smooth;}
 }
 @media all and (max-width:788.99px){
   /*반응형테이블*/
-  .board-list table {}
+  .board-list colgroup {display: none;}
+
+  /*반응형테이블*/
+  .board-row-list colgroup{display: none;}
+  .board-row-list table>tbody>tr>th,
+  .board-row-list table>tbody>tr>td {display: block;}
+  .board-row-list table>tbody>tr>th {border: 0; }
+  .board-row-list table>tbody>tr>td {border: 0; text-align: center;}
+
+  .contact-wrap {margin-bottom: 50px;}
+
+
 
 }
 @media all and (max-width:519.99px){
@@ -370,7 +381,7 @@ body {scroll-behavior: smooth;}
   body, table, input, select, textarea, a, a:link, a:visited, a:hover, h1, h2, h3, h4, h5, h6, a, p {font-size: 14px;}
   .mo-header > .flex { padding: 0 20px;}
 
-  .board-title {display: inline-block; max-width: 60%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+  .board-title {display: inline-block;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
   .board-date1 {display: none;}
 
   .form-signin {border: 0;}
