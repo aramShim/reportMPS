@@ -158,13 +158,12 @@ body {scroll-behavior: smooth;}
 .main-barchart-wrap .item .item-header .gray {padding-left: 10px;}
 
 /*overview*/
+.overview-total-wrap {margin-top: 20px; border-radius: 10px; overflow: hidden;}
 .overview-total-wrap dl {background-color: #f1f1f1; padding: 10px 20px; border-bottom: 1px solid #fff;}
-.overview-total-wrap dl:last-child {background-color: #fdf0e2; border-radius: 0 0 10px 10px;}
+.overview-total-wrap dl:last-child {background-color: #fdf0e2; }
 .overview-total-wrap .flex {justify-content: space-between;}
 .overview-total-wrap dl dt {font-weight: 700;}
 .overview-total-wrap dl dd {font-weight: 600;}
-.board-list table>tbody>tr>td[data-title*="Royalty Payable"] {text-align: right;}
-
 
 
 /*공지사항*/
@@ -173,9 +172,7 @@ body {scroll-behavior: smooth;}
 .main-board-list a {display: inline-flex; align-items: center; justify-content: space-between; padding: 10px 0; width: 100%; border-bottom: 1px solid #c2c2c2;}
 .main-board-list li:last-child a {border-bottom: 0;}
 .main-board-list a:hover {background: #f7f7f7;}
-.main-board-list .board-qu {display: inline-block; padding-left: 16px;}
-
-.new-icon {width: 20px; height: 20px; border-radius: 50%; background-color: #019fe0; color: #fff; font-weight: 900; display: inline-block; font-size: 11px; margin-left: 5px; vertical-align: text-bottom; line-height: 20px; text-align: center;}
+.new-icon {width: 20px; height: 20px; border-radius: 50%; background-color: #017ee0; color: #fff; font-weight: 900; display: inline-block; font-size: 11px; margin-left: 5px; vertical-align: text-bottom; line-height: 20px; text-align: center;}
 
 /*statement*/
 .i-paper-download {line-height: 1.3;}
@@ -358,20 +355,16 @@ body {scroll-behavior: smooth;}
   .board-list table.table-scroll tbody tr td {display: flex; align-items: center; text-align: left; border: 0; border-right: 1px solid #ccc; padding: 10px; border-bottom: 1px solid #ccc; height: 62px;}
   .board-list table.table-scroll tbody tr td[data-title*="Income Source"]{background-color: #fdf0e2; border-top: 1px solid #ccc; font-size: 13px;}
 
-  .overview-total-wrap {margin-top: 20px;}
-  .overview-total-wrap dl:first-child{border-radius: 10px 10px 0 0}
-
-
   .contact-wrap {margin-bottom: 50px;}
 
 }
 @media all and (max-width:519.99px){
   
-  body, table, input, select, textarea, a, a:link, a:visited, a:hover, h1, h2, h3, h4, h5, h6, a, p {font-size: 14px;}
+  body, table, input, select, textarea, a, a:link, a:visited, a:hover, h1, h2, h3, h4, h5, h6, a, p {font-size: 13px;}
   .mo-header > .flex { padding: 0 20px;}
 
   .board-title {display: inline-block;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-  .board-view-title .board-title {font-size: 20px;  margin-bottom: 0;}
+  .board-view-title .board-title {font-size: 18px;  margin-bottom: 0;}
   .board-view-inner {padding: 10px; border: 0; font-weight: 400}
   
   .board-date1 {display: none;}
