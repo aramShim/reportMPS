@@ -123,19 +123,10 @@ body {scroll-behavior: smooth;}
 .content-title .store-name.flex {align-items: center; gap: 15px;}
 .content-title .store-name h2 {font-size: 18px; font-weight: 900;}
 .content-title .date-info i {color: #019fe0; vertical-align: middle; font-size: 1.1em; margin-right: 5px;}
-.search-store {display: inline-flex; align-items: center; /*background-color: #f3f4f7; padding: 0 15px;*/ border-radius: 26px; overflow: hidden;  position: relative;}
 
-.search-store input.input-text {background-color: #f3f4f7; padding: 10px 45px 10px 25px; outline: 1px solid #f3f4f7}
-.search-store input.input-text::placeholder {color: #959595;}
-.search-store .more-circle {position: absolute; top: 50%; right: 15px; transform: translateY(-50%);}
 .more-circle {display: inline-flex; align-items: center; justify-content: center; background: #c2c2c2; border-radius: 50%; width: 20px; height:20px; transition: all .3s ease;}
 .more-circle i { font-size: .5em; color: #fff; position: relative; top: 1px; }
 
-.search-store:hover input.input-text,
-.search-store input.input-text:focus {background-color: #ebf6ff;}
-.search-store:hover .more-circle,
-.search-store input.input-text:focus + .more-circle,
-.search-store .more-circle:focus {background-color: #5096ff;transform: translateY(-50%) rotate(90deg);}
 
 /*main grid layout*/
 .content-inner > .flex {padding-bottom: 50px; gap: 20px;}
@@ -146,7 +137,6 @@ body {scroll-behavior: smooth;}
 .grid3 .item2 {width: calc(100% / 3 * 2);}
 .grid4 .item {width: calc(100% / 4);}
 .grid6 .item {width: calc(100% / 6);}
-
 
 .item .item-header {padding-bottom: 16px; }
 .item .item-header.flex {align-items: baseline;}
@@ -167,46 +157,15 @@ body {scroll-behavior: smooth;}
 .main-barchart-wrap .item {border: 1px solid #888; padding: 40px 45px; border-radius: 10px;}
 .main-barchart-wrap .item .item-header .gray {padding-left: 10px;}
 
-.horizontalbar-wrap li {padding: 16px 0; border-bottom: 1px solid #ccc;}
-.horizontalbar-wrap li:last-child {border-bottom: 0; padding-bottom: 0;}
-.horizontalbar-wrap li > * {display: inline-block;}
-.horizontalbar-wrap li > strong.label {width: 40%; font-weight: 700; white-space: nowrap;}
-.horizontalbar-wrap li .label .label-num:first-of-type {width: 40px; display: inline-block;}
-.horizontalbar-wrap li .label .label-num + .label-num {padding-left: 10px;}
-.horizontalbar-wrap li .bar-percent {position: relative; width: calc(100% - 30%); display: flex; align-items: center; justify-content: space-between;}
-.horizontalbar-wrap li .bar-wrap {width: 85%; }
-.horizontalbar-wrap li .bar-wrap .bar {display: inline-block; background-color: #019fe0; text-align: right; padding: 0 10px;}
-.horizontalbar-wrap li .bar-wrap .bar  b {color: #fff; }
-.horizontalbar-wrap li .percent {width: 15%; color: #888; text-align: right;}
+/*overview*/
+.overview-total-wrap dl {background-color: #f1f1f1; padding: 10px 20px; border-bottom: 1px solid #fff;}
+.overview-total-wrap dl:last-child {background-color: #fdf0e2; border-radius: 0 0 10px 10px;}
+.overview-total-wrap .flex {justify-content: space-between;}
+.overview-total-wrap dl dt {font-weight: 700;}
+.overview-total-wrap dl dd {font-weight: 600;}
+.board-list table>tbody>tr>td[data-title*="Royalty Payable"] {text-align: right;}
 
-.horizontalbar-wrap li .bar-wrap .bar b {position: relative; overflow: visible;}
-.horizontalbar-wrap li .bar-wrap .bar:hover b:before{
-  content:'';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 5px solid transparent;
-  border-right-color:#252525;
-  border-left: 0;
-  top: -0px;
-  bottom: 0;
-  margin: auto 0;
-  left: 28px;
-}
-.horizontalbar-wrap li .bar-wrap .bar:hover b:after {
-  content: attr(aria-label);
-  position: absolute;
-  top: -6px;;
-  left: 32px;
-  height: 32px;
-  line-height: 32px;
-  padding: 0 14px;
-  background: #252525;
-  border-radius: 20px;
-  white-space: nowrap;
-  color: #fff;
-  font-size: 13px;
-}
+
 
 /*공지사항*/
 .main-board-wrap.flex {gap: 50px;}
@@ -388,9 +347,22 @@ body {scroll-behavior: smooth;}
   .board-row-list table>tbody>tr>th {border: 0; }
   .board-row-list table>tbody>tr>td {border: 0; text-align: center;}
 
+  /*table-scroll overview*/
+  .board-list table.table-scroll {display: flex; width: 100%; border-left: 1px solid #ccc; }
+  .board-list table.table-scroll thead {display: block; float: left;}
+  .board-list table.table-scroll thead tr {display: block; border-right: 1px solid #ccc; }
+  .board-list table.table-scroll thead tr th {display: flex; align-items: center; justify-content: flex-end; text-align: right; border: 0; border-bottom: 1px solid #ccc; border-radius: 0; padding: 10px 10px; height: 62px; background-color: #f1f1f1; font-size: 13px; font-weight: 600; width: 120px;}
+  .board-list table.table-scroll thead tr th[data-title*="Income Source"] {border-top: 1px solid #ccc;}
+  .board-list table.table-scroll tbody {display: flex; flex-wrap: nowrap; width: auto; position: relative; overflow-x: auto; white-space: nowrap;}
+  .board-list table.table-scroll tbody tr {display: inline-block; vertical-align: middle; border-left: 1px solid #ccc; margin-left: -1px;}
+  .board-list table.table-scroll tbody tr td {display: flex; align-items: center; text-align: left; border: 0; border-right: 1px solid #ccc; padding: 10px; border-bottom: 1px solid #ccc; height: 62px;}
+  .board-list table.table-scroll tbody tr td[data-title*="Income Source"]{background-color: #fdf0e2; border-top: 1px solid #ccc; font-size: 13px;}
+
+  .overview-total-wrap {margin-top: 20px;}
+  .overview-total-wrap dl:first-child{border-radius: 10px 10px 0 0}
+
+
   .contact-wrap {margin-bottom: 50px;}
-
-
 
 }
 @media all and (max-width:519.99px){
@@ -407,6 +379,9 @@ body {scroll-behavior: smooth;}
   .form-signin {border: 0;}
   .analysis_tab {padding-bottom: 20px;}
   .analysis-wrap .item2 {padding: 10px 10px;}
+
+  /*overview*/
+  .main-barchart-wrap .item {padding: 0; border: 0;}
 }
 
 @media all and (max-width:455.99px){
