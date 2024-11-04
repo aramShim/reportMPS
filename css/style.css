@@ -364,15 +364,22 @@ body {scroll-behavior: smooth;}
   /*반응형테이블*/
   .board-list .board colgroup {display: none;}
   .board thead {display: none;}
-  .board-list .board tbody tr {display: block; border-bottom: 1px solid #ededed; padding: 10px 0;}
-  .board-list .board tbody tr td {display: inline-flex; align-items: center; border: 0; padding: 0; padding-right: 16px;}
+  .board-list .board tbody tr {display: block; border-bottom: 1px solid #ededed; padding: 10px 0;}  
+  .board-list .board tbody tr td {display: flex; align-items: center; border: 0; padding: 0; padding-right: 16px;}  
   .board tbody tr td.dis-none {display: none;}
-  .board tbody tr td:not(.dis-none,.td-left):before {
+  .board tbody tr td:not(.dis-none,.td-left,.m_board_th):before {
     font-weight: 500;
     content: attr(data-title) ;
     margin-right: 10px;
   }
   .board tbody tr td.td-left {display: flex;}
+
+  /*cboard*/
+  .board-list .board.c_board tbody tr {border-bottom: 0; }
+  .board-list .board.c_board tbody tr td {justify-content: space-between; padding: 5px;}
+  .board-list .board.c_board tbody tr td.m_board_th {background: #f1f1f1; text-align: center; display: block; padding: 5px; border-radius: 5px;}
+  .i-paper-download {font-size: 12px;}
+  .i-paper-download:before {display: none;}
 
   /*반응형테이블*/
   .board-row-list colgroup{display: none;}
