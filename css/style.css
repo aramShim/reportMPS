@@ -74,7 +74,7 @@ body {scroll-behavior: smooth;}
 .leftmenu .gnb > li .sub-menu li {position: relative; border-radius: 8px;}
 .leftmenu .gnb > li .sub-menu li:hover,
 .leftmenu .gnb > li .sub-menu li.current-menu {background: #f0f0f0;}
-.leftmenu .gnb > li .sub-menu li .btn-favorite {position: absolute; top: 50%; left: 10px; transform: translateY(-50%); z-index: 2; cursor: pointer; opacity: 0; transition: all .1s; color: #5e5e5e; font-size: 0;}
+.leftmenu .gnb > li .sub-menu li .btn-favorite {position: absolute; top: 50%; left: 10px; transform: translateY(-50%); z-index: 2; cursor: pointer; opacity: 0; transition: all .1s; color: #ccc; font-size: 0;}
 .leftmenu .gnb > li .sub-menu li .btn-favorite.active {opacity: 1; color: #ffad15; }
 .leftmenu .gnb > li .sub-menu li:hover .btn-favorite {opacity: 1; transition: all .1s;}
 .leftmenu .gnb > li .sub-menu li .btn-favorite i {font-size: 14px;}
