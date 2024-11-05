@@ -13,7 +13,7 @@ $(function(){
 
 
   const favoriteList = $('.favorit-list');
-  const currentPath = window.location.pathname;
+  let currentPath = window.location.pathname;
 
   loadFavorites()
   
@@ -52,7 +52,11 @@ $(function(){
     // storedFavorites 배열을 순회하여 favorit-list에 추가
     storedFavorites.forEach(item => {
       // 현재 페이지와 즐겨찾기 path가 동일하면 active 클래스 추가
-      const isActive = currentPath.indexOf(item.path.replace('.html', '')) !== -1 ? 'active' : '';;
+      let isActive = currentPath.indexOf(item.path.replace('.html', '')) !== -1 ? 'active' : '';
+      if(item.label == 'Analysis' && currentPath.indexOf('r_analysis') !== -1){
+        currentPath = 'r_analysis';
+        isActive = item.path.indexOf(currentPath) !== -1 ? 'active' : '';
+      }
   
       // favorit-list에 항목 추가
       const listItem = `
