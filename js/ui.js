@@ -52,7 +52,7 @@ $(function(){
     // storedFavorites 배열을 순회하여 favorit-list에 추가
     storedFavorites.forEach(item => {
       // 현재 페이지와 즐겨찾기 path가 동일하면 active 클래스 추가
-      const isActive = '/'+item.path === currentPath ? 'active' : '';
+      const isActive = currentPath.indexOf('/' + item.path) !== -1 ? 'active' : '';;
   
       // favorit-list에 항목 추가
       const listItem = `
@@ -80,7 +80,8 @@ $(function(){
       localStorage.setItem('favorites', JSON.stringify(favorites));
       
       // favorit-list에 항목 추가
-      const isActive = '/'+path === currentPath ? 'active' : '';
+      //const isActive = '/'+path === currentPath ? 'active' : '';
+      const isActive = currentPath.indexOf('/' + path) !== -1 ? 'active' : '';
       const listItem = `
         <li>
           <div class="favorite-item ${isActive}">
