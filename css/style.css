@@ -46,6 +46,9 @@ body {scroll-behavior: smooth;}
 
 .form-signin .submit-btn {width: 100%; padding: 10px; justify-content: center; margin-top: 20px;}
 
+.login-info {margin-top: 40px; border-radius: 12px; background-color: var(--color-blue-bg); padding: 30px; width: 100%; max-width: 460px;}
+.login-info .flex {gap: 10px;}
+
 /*********************
 * LAYOUT
 *********************/
@@ -379,6 +382,7 @@ body {scroll-behavior: smooth;}
   .board-date1 {display: none;}
 
   .form-signin {border: 0;}
+  .login-info {max-width: calc(100% - 48px);}
   .analysis_tab {padding-bottom: 20px;}
   .analysis-wrap .item2 {padding: 10px 10px;}
 
