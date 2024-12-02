@@ -2,7 +2,8 @@
  * BUTTON
  * **************************************** */
 /*새로*/
-:root {--color-gray1: #212126;--color-gray2: #36363D;--color-gray3: #57575B;--color-gray4: #62626A;--color-gray5: #797981;--color-gray6: #919197;--color-gray7: #AAAAAE;--color-gray8: #DBDBDB;--color-gray9: #E9E9E9;--color-gray10: #FFFFFF;--color-blue1: #125DE6;--color-blue2: #A9C7FF;--color-blue3: #E9F1FF;--color-blue4: #F6F8FC;--color-green: #0FD2D0;--color-red: #FA2828;--width-max: 1200px;
+:root {--color-gray1: #212126;--color-gray2: #36363D;--color-gray3: #57575B;--color-gray4: #62626A;--color-gray5: #797981;--color-gray6: #919197;--color-gray7: #AAAAAE;--color-gray8: #DBDBDB;--color-gray9: #E9E9E9;--color-gray10: #FFFFFF;--color-blue1: #125DE6;--color-blue2: #A9C7FF;--color-blue3: #E9F1FF;--color-blue4: #F6F8FC;
+    --color-greenblue: #0FD2D0;--color-red: #FA2828;--width-max: 1200px;
     --color-bg: #ecf0f7;--color-red: #ff2525;--color-red-bg: #feeeee;--color-red-border: #fedada;--color-green: #40a56e;--color-green-bg: #e8fff3;--color-green-border: #50cd89;--color-yellow: #ef9e05;--color-yellow-bg: #fff6e5;--color-yellow-border: #ffe5b4;--color-blue: #3a75f9;--color-blue-bg: #ebf2ff;--color-blue-border: #d7e4f9;--color-gray: #484848;--color-gray-bg: #f3f3f3;--color-gray-border: #ccc; } 
     
 .btn,

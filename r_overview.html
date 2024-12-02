@@ -130,6 +130,42 @@
             </div>
           </div>
 
+          <!--analysis chart-->
+          <div class="flex grid4 main-piechart-wrap">
+            <div class="item">
+              <div class="item-header">
+                <p><strong>Top Song</strong></p>
+              </div>
+              <div class="item-body">
+                <canvas id="piechart1" width="400" height="260" aria-label="title" role="img"></canvas>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-header">
+                <p><strong>Top Territory</strong></p>
+              </div>
+              <div class="item-body">
+                <canvas id="piechart2" width="400" height="260" aria-label="title" role="img"></canvas>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-header">
+                <p><strong>Income Type</strong></p>
+              </div>
+              <div class="item-body">
+                <canvas id="piechart3" width="400" height="260" aria-label="title" role="img"></canvas>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-header">
+                <p><strong>Top Source</strong></p>
+              </div>
+              <div class="item-body">
+                <canvas id="piechart4" width="400" height="260" aria-label="title" role="img"></canvas>
+              </div>
+            </div>
+          </div>
+
           <div>
             
             <div class="board-wrap">
@@ -213,6 +249,147 @@
 	Chart.defaults.global.defaultFontColor = 'black';
 	Chart.defaults.global.defaultFontSize = 13;
 
+  var ctx1 = document.getElementById('piechart1').getContext('2d');
+	var ctx2 = document.getElementById('piechart2').getContext('2d');
+	var ctx3 = document.getElementById('piechart3').getContext('2d');
+	var ctx4 = document.getElementById('piechart4').getContext('2d');	 
+
+  var data1 = {
+		labels: ["WANNABE", "LOCO","SET ME FREE","DALLA DALLA","I AM"],
+		  datasets: [
+			{
+				fill: true,
+				backgroundColor: [
+          'rgba(255, 99, 132, 0.9)',
+          'rgba(255, 159, 64, 0.9)',
+          'rgba(255, 205, 86, 0.9)',
+          'rgba(75, 192, 192, 0.9)',
+          'rgba(54, 162, 235, 0.9)',
+          'rgba(153, 102, 255, 0.9)',
+          'rgba(201, 203, 207, 0.9)'
+        ],
+				data: [130854066,81570323,40383538,64511949,11890455]
+			}
+		]
+	};
+	var data2 = {
+		labels: ["United States of America", "Japan","Canada","Hong Kong","Australia"],
+		  datasets: [
+			{
+				fill: true,
+				backgroundColor: [
+          'rgba(255, 99, 132, 0.9)',
+          'rgba(255, 159, 64, 0.9)',
+          'rgba(255, 205, 86, 0.9)',
+          'rgba(75, 192, 192, 0.9)',
+          'rgba(54, 162, 235, 0.9)',
+          'rgba(153, 102, 255, 0.9)',
+          'rgba(201, 203, 207, 0.9)'
+        ],
+				data: [77334496,66361790,19422506,12739239,12465638]
+			}
+		]
+	};
+	var data3 = {
+		labels: ["Digital", "Sync","Others","Performance","Mechanical"],
+		  datasets: [
+			{
+				fill: true,
+				backgroundColor: [
+          'rgba(255, 99, 132, 0.9)',
+          'rgba(255, 159, 64, 0.9)',
+          'rgba(255, 205, 86, 0.9)',
+          'rgba(75, 192, 192, 0.9)',
+          'rgba(54, 162, 235, 0.9)',
+          'rgba(153, 102, 255, 0.9)',
+          'rgba(201, 203, 207, 0.9)'
+        ],
+				data: [156320424,28912185,20853255,17636482,13557780]
+			}
+		]
+  };
+  var data4 = {
+		labels: ["Various", "Spotify-MLC","Youtube","BMG RM CANADA","BMI"],
+		  datasets: [
+			{
+				fill: true,
+				backgroundColor: [
+          'rgba(255, 99, 132, 0.9)',
+          'rgba(255, 159, 64, 0.9)',
+          'rgba(255, 205, 86, 0.9)',
+          'rgba(75, 192, 192, 0.9)',
+          'rgba(54, 162, 235, 0.9)',
+          'rgba(153, 102, 255, 0.9)',
+          'rgba(201, 203, 207, 0.9)'
+        ],
+				data: [59695342,25350931,20553815,20077616,10767723]
+			}
+		]
+  };
+  
+  var options = {
+   
+		legend : {
+      position: 'bottom',
+      fullWidth: false,
+      labels:{
+          fontFamily: "'poppin','Pretendard-Regular', 'Dotum', 'AppleGothic', 'sans-serif'",
+          fontStyle:'600',
+          fontSize:13,
+          boxWidth:8,
+          padding: 10,
+          usePointStyle:true,
+          pointStyle:'circle',          
+        }
+    },
+    elements: {
+      arc: {
+        borderWidth: 0, // <-- Set this to derired value
+        borderColor:'#fff'
+      }
+    },
+		//rotation: -1 * Math.PI,
+		tooltips:{
+			enabled: true,
+			callbacks:{
+				label: function(tooltipItem, data){
+					var indice = tooltipItem.index;           
+          let result = data.datasets[0].data[indice].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');      
+					return  data.labels[indice] +' : '+ result + '원';
+				}
+			}
+		},
+		plugins :{
+     labels: {
+       fontColor: 'white',
+       textAlign: 'center',
+       render:'percent'
+     }
+   },
+    
+	};
+  
+  var homeChart1 = new Chart(ctx1, {
+		type: 'pie',
+		data: data1,
+		options: options
+	});	
+	var homeChart2 = new Chart(ctx2, {
+		type: 'pie',
+		data: data2,
+		options: options
+	});
+	var homeChart3 = new Chart(ctx3, {
+		type: 'pie',
+		data: data3,
+		options: options
+	});
+  var homeChart4 = new Chart(ctx4, {
+		type: 'pie',
+		data: data4,
+		options: options
+	});
+
 
   //막대차트
   var ctx = document.getElementById("barmix").getContext('2d');
@@ -223,7 +400,7 @@
         label: 'Royalty',
         yAxisID: 'B',
         data: [336340,341510,311430,274020,281050,310830,348071,336340],
-        backgroundColor: '#bd256e'
+        backgroundColor: ['#bd256e','#bd256e','#bd256e','#bd256e','#bd256e','#bd256e','#bd256e','rgba(255, 159, 64, 0.9)']
       }
     ]
   };

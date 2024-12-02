@@ -61,7 +61,7 @@ $(function(){
       // favorit-list에 항목 추가
       const listItem = `
         <li>
-          <div class="favorite-item ${isActive}">
+          <div class="favorite-item ${isActive}" data-label="${item.label}">
             <button type="button" class="btn-remove-favorite" data-path="${item.path}"><i class="icon-sign07"></i></button>
             <a data-path="${item.path}" href="${item.path}">${item.label}</a>
           </div>
@@ -75,7 +75,6 @@ $(function(){
 
   // 즐겨찾기 추가 함수
   function addFavorite(path, label) {
-    console.log(1)
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     // 중복 확인 후 추가
@@ -88,7 +87,7 @@ $(function(){
       const isActive = currentPath.indexOf(path.replace('.html', '')) !== -1 ? 'active' : '';
       const listItem = `
         <li>
-          <div class="favorite-item ${isActive}">
+          <div class="favorite-item ${isActive}" data-label="${label}">
             <button type="button" class="btn-remove-favorite" data-path="${path}"><i class="icon-sign07"></i></button>
             <a data-path="${path}" href="${path}">${label}</a>
           </div>
