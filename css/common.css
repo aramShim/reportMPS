@@ -119,7 +119,7 @@ a.btn.btn-square i[class*="icon-"] {padding: 0;}
 .board-list table td.td-left {text-align: left;}
 .board-list table td.td-right {text-align: right;}
 
-.board-list table>thead>tr>th {padding: 12px 4px; color: #252525;border-top: 1px solid #888;border-bottom: 1px solid #888; vertical-align: middle;}
+.board-list table>thead>tr>th {padding: 12px 4px; color: #252525;border-top: 1px solid #888;border-bottom: 1px solid #888; vertical-align: middle; font-weight: 700;}
 .board-list table>thead>tr>th small {display: block;}
 .board-list table>thead>tr>th:first-child {padding-left: 16px;border-left: 1px solid #888;border-top-left-radius: 10px;border-bottom-left-radius: 10px; }
 .board-list table>thead>tr>th:last-child {padding-right: 16px;border-right: 1px solid #888;border-top-right-radius: 10px;border-bottom-right-radius: 10px; } 
